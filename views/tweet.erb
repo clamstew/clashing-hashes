@@ -1,5 +1,15 @@
-<h2>This is your new tweet:</h2>
-<p>We just posted that to twitter</p>
-<div class="tweet-wrapper">
-  <%= "#{params[:tweet_body]}" %>
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="large-3 columns">&nbsp;</div>
+        <div class="large-6 columns">
+            <h2>This is your new tweet:</h2>
+            <p>We just posted your tweet to twitter on the <strong><%= "@#{params[:twitter_handle]}" %></strong> timeline.</p>
+            <div class="tweet-wrapper">
+              <%= "#{params[:tweet_body]}" %>
+              <div class="twitter-icon-wrapper"></div>
+            </div>
+        </div>
+        <div class="large-3 columns">&nbsp;</div>
+    </div>
 </div>
