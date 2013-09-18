@@ -4,5 +4,6 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  'hello world'
+  name = 'Clay Stew'
+  "hello #{name}"
 end
