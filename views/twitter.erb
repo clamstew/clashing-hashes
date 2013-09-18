@@ -1,0 +1,10 @@
+<h1>The Battle is On</h1>
+
+<br />
+first hash <%= "##{params[:first_hash]}" %>
+<br />
+second hash <%= "##{params[:second_hash]}" %>
+
+<% @tweets_list.each do |x| %>
+	<h2><%= x %></h2>
+<% end %>
