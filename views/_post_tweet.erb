@@ -1,0 +1,22 @@
+<h4>Post a Tweet:</h4>
+
+<div class="row">
+	<form action="/tweet" method="post">
+		<div class="large-12 columns">
+			<div class="row collapse">
+				<div class="small-3 large-2 columns">
+					<span class="prefix">@</span>
+				</div>
+				<div class="small-9 large-10 columns">
+					<input type="text" name="twitter_handle" id="twitter_handle" placeholder="twitter_handle"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<textarea name="tweet_body" id="tweet_body" placeholder="Type your tweet here...">I just had a hashtag battle at 'Clash of the Hashes' #hashclash http://t.co/something</textarea>
+					<span class="center-button"><input type="submit" class="button" value="Tweet!" name="submit_tweet" /></span>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
