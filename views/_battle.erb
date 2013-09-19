@@ -1,24 +1,24 @@
-<h4>Battle Some Hashtags:</h4>
+<% # this was the OLD FILE FOR BATTLING HASHTAGS %>
+<h4>Battle Popularity for a Couple Tweet Handles:</h4>
 <div class="row">
 	<form action="/twitter" method="post">
 		<div class="large-12 columns">
 			<div class="row collapse">
 				<div class="small-3 large-2 columns">
-					<span class="prefix">#</span>
+					<span class="prefix">@</span>
 				</div>
 				<div class="small-9 large-10 columns">
-					<input type="text" name="first_hash" id="text" placeholder="hashtag contestant 1" />
+					<input type="text" name="login-a" id="text" placeholder="tweet_handle contestant 1" />
 				</div>
 				<div class="small-3 large-2 columns">
-					<span class="prefix">#</span>
+					<span class="prefix">@</span>
 				</div>
 				<div class="small-9 large-10 columns">
-					<input type="text" name="second_hash" id="text" placeholder="hashtag contestant 2" />
+					<input type="text" name="login-b" id="text" placeholder="tweet_handle contestant 2" />
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<!-- <textarea name="tweet_body" id="tweet_body" placeholder="Type your tweet here..."></textarea> -->
 					<span class="center-button"><input type="submit" class="button" value="Game On" name="submit" /></span>
 				</div>
 			</div>

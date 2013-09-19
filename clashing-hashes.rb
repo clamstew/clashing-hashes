@@ -3,11 +3,10 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'twitter'
-# for twitter api
-# require 'oauth'
+require 'pry'
 
-require_relative 'lib/twitter'
-# require_relative 'lib/twitter_connect'
+require_relative 'lib/clashing_hashes_twitter'
+require_relative 'lib/follower_clash'
 
 get '/' do
   erb :index
@@ -15,9 +14,17 @@ end
 
 # Post request for /twitter
 post '/twitter' do
-  tweet = Twitter::Tweet.new 
+  tweet = ClashingHashesTwitter::Tweet.new 
   @tweets_list = tweet.tweets
   erb :twitter
+end
+
+post '/result' do
+  @user1 = FollowerClash::User.new(params["login-a"])
+  @user2 = FollowerClash::User.new(params["login-b"])
+  @result = FollowerClash::Comparer.new(@user1, @user2).compare
+  # binding.pry
+  erb :result
 end
 
 post '/tweet' do
@@ -35,7 +42,5 @@ post '/app' do
 end 
 
 get '/test' do
-  # twit_connect = TwitterConnect.new
-  # @twit_connect = twit_connect.server_response
-  # puts "#{@twit_connect}"
+
 end
