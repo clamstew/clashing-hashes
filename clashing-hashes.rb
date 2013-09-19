@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader'
+require 'twitter'
 # for twitter api
 # require 'oauth'
 
